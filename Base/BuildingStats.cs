@@ -15,7 +15,6 @@ namespace Base
             Mediator.OnModifierRemove += StatChange;
             temperature = baseTemperature;
             powerSuply = basePowerSupply;
-
         }
         void StatChange()
         {

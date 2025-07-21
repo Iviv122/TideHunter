@@ -23,7 +23,6 @@ namespace Modules
             mod1 = null;
             StateChange(false);
         }
-
         public override void TurnOn(Building building)
         {
             mod = new StatModifier(StatType.Temperature, new AddOperation(Heat), 0);
@@ -44,7 +43,6 @@ namespace Modules
                 TurnOff(building);
             }
         }
-
         public override void BlackOut(Building building)
         {
             TurnOff(building);

@@ -17,7 +17,6 @@ public class CameraRotate : MonoBehaviour
     }
     public void Look(Vector2 dir)
     {
-
         float x = dir.x * sensetivityX;
         float y = dir.y * sensetivityY;
 

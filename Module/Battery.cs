@@ -25,18 +25,15 @@ namespace Modules
             }
             if (mod != null)
             {
-
                 LifeTime -= Time.deltaTime;
                 LifeTimePercent = LifeTime / InitialLifeTime;
                 OnChange?.Invoke();
             }
-
         }
         public void TurnOff()
         {
             if (mod != null)
             {
-
                 mod.MarkedForRemoval = true;
                 mod = null;
             }

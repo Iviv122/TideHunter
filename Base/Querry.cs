@@ -4,7 +4,6 @@ namespace Base
     {
         public readonly StatType StatType;
         public float Value;
-
         public Querry(StatType statType, float Value)
         {
             this.StatType = statType;

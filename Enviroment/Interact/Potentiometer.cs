@@ -1,11 +1,9 @@
-using Events;
 using UnityEngine;
 
 namespace Interact
 {
     public class Potentionometer : Scrollable
     {
-
         public override void Down()
         {
             Debug.Log("Down");

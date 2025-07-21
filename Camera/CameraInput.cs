@@ -2,7 +2,6 @@ using Interact;
 using UnityEngine;
 public class CameraInput : MonoBehaviour
 {
-
     [SerializeField] float Length;
     public Vector3 mousePos;
     public bool canInteract;

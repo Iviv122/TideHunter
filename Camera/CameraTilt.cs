@@ -3,7 +3,6 @@ using UnityEngine;
 public class CameraTilt : MonoBehaviour
 {
     [Header("Observing")]
-
     [SerializeField] Transform pivot;
     [SerializeField] float t;
     [Header("Offseting")]
@@ -11,7 +10,6 @@ public class CameraTilt : MonoBehaviour
     [SerializeField] Vector2 curOffset = new Vector2(0, 0);
     void Update()
     {
-
         Vector2 mousePos = Camera.main.ScreenToViewportPoint(Input.mousePosition);
 
         mousePos -= new Vector2(0.5f,0.5f);

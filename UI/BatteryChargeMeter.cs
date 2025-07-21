@@ -1,7 +1,5 @@
-using Modules;
 using TMPro;
 using UnityEngine;
-using VContainer;
 namespace UI
 {
     public class BatteryChargeMeter : MonoBehaviour

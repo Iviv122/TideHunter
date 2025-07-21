@@ -32,3 +32,8 @@ By the most part it was excessive. Most of problems could be solved by scriptabl
 ## Why ScriptableObjects?
 I was inspired by Barotrauma xml thing as well as fact that SO are greate for event busses. They <i>would</i> be great in case of bigger game but with end scale it was excessive and gave additional troubles to work with. They would be amazing in case of many same objects which were initially planned. Like 3 gens and some light branches. But in end result it is realistically bettet to use SingleTone which simplify the whole process for such small game. 
 
+## Patterns used
+- Strategy Pattern for operation like add or multiply
+- Observer or simply ``` public event Action eventNamel ``` sadly no example with interface
+- Chain of Responsobility for Stats. We have querry class which responsible for stat operations
+- Mediator pattern. It is bery handy for stats. You can see example in StatsMediator

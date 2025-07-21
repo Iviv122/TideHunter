@@ -11,7 +11,6 @@ namespace Events
         }
         public override void Act(float value)
         {
-
         }
         public override void Act(bool state)
         {

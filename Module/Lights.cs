@@ -25,11 +25,11 @@ namespace Modules
 
         public override void TurnOn(Building building)
         {
-                mod = new StatModifier(StatType.Temperature, new AddOperation(Heat), 0);
-                mod1 = new StatModifier(StatType.Energy, new AddOperation(Energy), 0);
+            mod = new StatModifier(StatType.Temperature, new AddOperation(Heat), 0);
+            mod1 = new StatModifier(StatType.Energy, new AddOperation(Energy), 0);
 
-                building.Stats.Mediator.AddModifier(mod);
-                building.Stats.Mediator.AddModifier(mod1);
+            building.Stats.Mediator.AddModifier(mod);
+            building.Stats.Mediator.AddModifier(mod1);
             StateChange(true);
         }
         public override void SwitchState(Building building)
@@ -46,8 +46,6 @@ namespace Modules
 
         public override void BlackOut(Building building)
         {
-            // die?
-            // maybe switch but idk
             TurnOff(building);
         }
     }

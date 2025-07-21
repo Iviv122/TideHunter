@@ -28,12 +28,10 @@ namespace UI
             i = 0;
             radar.OnLose += LoseSound;
         }
-
         public void Start()
         {
             subtitleRoutine = StartCoroutine(PlayAudioCoroutine());
         }
-
         private IEnumerator PlayAudioCoroutine()
         {
             yield return new WaitForSeconds(2f);
@@ -48,7 +46,6 @@ namespace UI
 
             label.text = "";
         }
-
         public void LoseSound()
         {
             if (!lost)
@@ -63,7 +60,6 @@ namespace UI
                 StartCoroutine(LoseCoroutine());
             }
         }
-
         private IEnumerator LoseCoroutine()
         {
             AudioSource.PlayOneShot(loseSound);
@@ -71,7 +67,6 @@ namespace UI
             yield return new WaitForSeconds(loseSound.length + 0.5f);
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
-
         private void OnDestroy()
         {
             if (subtitleRoutine != null)

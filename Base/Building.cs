@@ -10,7 +10,6 @@ namespace Base
         public readonly CurrentStatValue Heat;
         public readonly CurrentStatValue Power;
         public readonly ModuleManager ModuleManager;
-        //public readonly CurrentStatValue OxygenLevel;
         public Building(ModuleManager moduleManager)
         {
             Stats = new(30, 150);
@@ -18,9 +17,7 @@ namespace Base
             Power = new(Stats.PowerSuply, 10f);
             ModuleManager = moduleManager;
 
-
             Power.OnPowerOff += PowerOff;
-
         }
 
         private void PowerOff()

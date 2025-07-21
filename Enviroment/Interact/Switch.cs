@@ -13,7 +13,6 @@ namespace Interact
                 item.Act(state);
             }
         }
-
         public override void Interact()
         {
             state = !state;

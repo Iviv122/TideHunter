@@ -6,7 +6,6 @@ public interface IOperationalStrategy
 public class AddOperation : IOperationalStrategy
 {
     readonly float value;
-
     public AddOperation(float value)
     {
         this.value = value;
@@ -16,7 +15,6 @@ public class AddOperation : IOperationalStrategy
 public class MultiplyOperation : IOperationalStrategy
 {
     readonly float value;
-
     public MultiplyOperation(float value)
     {
         this.value = value;

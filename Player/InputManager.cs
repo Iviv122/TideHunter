@@ -13,7 +13,6 @@ public class InputManager : MonoBehaviour
     public event Action<Vector2> Scroll;
     public void Awake()
     {
-
     }
     public void OnScrollWheel(InputValue ctx)
     {

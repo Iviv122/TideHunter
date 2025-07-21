@@ -11,7 +11,6 @@ namespace Events
         }
         public override void Act(float value)
         {
-
         }
         public override void Act(bool state)
         {
@@ -19,7 +18,6 @@ namespace Events
             {
                 if (item != null)
                 {
-
                     item.enabled = state;
                 }
             }

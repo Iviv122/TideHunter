@@ -26,7 +26,7 @@ namespace Base
             float delta = targetValue - currentValue;
             if (Mathf.Abs(delta) > 0)
             {
-                float m = delta / Mathf.Abs(delta); // in theoty gives -1, 0 or 1
+                float m = delta / Mathf.Abs(delta); // gives -1 or 1
                 currentValue += m * deltaTime * timeModifier;
                 if (currentValue <= 0)
                 {

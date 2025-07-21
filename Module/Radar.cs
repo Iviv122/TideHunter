@@ -1,7 +1,6 @@
 using System;
 using Base;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace Modules
 {
@@ -21,7 +20,6 @@ namespace Modules
         public event Action OnChange;
         public override void Start()
         {
-
             Started = false;
             Battery = InitialBattery;
             Debug.Log("Battery restarted");
@@ -29,7 +27,6 @@ namespace Modules
         public void Lose()
         {
             OnLose?.Invoke();
-            //Debug.Log("LoSER");
         }
         public override void Tick(float deltaTime)
         {
@@ -61,7 +58,6 @@ namespace Modules
         {
             if (mod != null)
             {
-
                 mod.MarkedForRemoval = true;
                 mod1.MarkedForRemoval = true;
             }

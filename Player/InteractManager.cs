@@ -29,7 +29,6 @@ public class InteractManager : MonoBehaviour
             {
                 if (scroll.y > 0)
                 {
-
                     thing.Up();
                 }
                 else
