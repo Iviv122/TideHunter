@@ -18,6 +18,8 @@ public class Hand : MonoBehaviour
         DropItem();
         this.item = item;
         model = Instantiate(item.Model, transform.position, Quaternion.identity, transform);
+        Collider col = model.GetComponent<Collider>();
+        Destroy(col);
     }
     public bool isEmpty()
     {
@@ -27,7 +29,6 @@ public class Hand : MonoBehaviour
     {
         return item != null && item.type == type;
     }
-
     public void ConsumeItem()
     {
         if (item != null)

@@ -6,12 +6,6 @@ namespace Events
     {
 
         [SerializeField] Light[] lightSources;
-        public override void Act()
-        {
-        }
-        public override void Act(float value)
-        {
-        }
         public override void Act(bool state)
         {
             foreach (var item in lightSources)

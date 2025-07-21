@@ -7,7 +7,6 @@ public class Cursor : MonoBehaviour
     [SerializeField] Material mat;
     public void Update()
     {
-
         Color col;
         transform.position = Vector3.Slerp(transform.position, input.mousePos, t);
         if (input.canInteract)

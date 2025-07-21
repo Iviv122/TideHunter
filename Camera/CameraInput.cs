@@ -10,7 +10,7 @@ public class CameraInput : MonoBehaviour
         if (Physics.Raycast(transform.position,transform.forward,out RaycastHit hit,Length))
         {
             this.mousePos = hit.point;
-            if (hit.collider.TryGetComponent<Interactable>(out Interactable interact) || hit.collider.TryGetComponent<Scrollable>(out Scrollable scroll))
+            if (hit.collider.TryGetComponent<Interactable>(out Interactable interact))
             {
                 canInteract = true;
             }

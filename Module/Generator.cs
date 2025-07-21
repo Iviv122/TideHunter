@@ -81,11 +81,6 @@ namespace Modules
                 TurnOff(building);
             }
         }
-
-        public override void BlackOut(Building building)
-        {
-        }
-
         public void OnConsume()
         {
             Fuel += FuelPerCanister;

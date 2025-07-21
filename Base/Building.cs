@@ -19,12 +19,10 @@ namespace Base
 
             Power.OnPowerOff += PowerOff;
         }
-
         private void PowerOff()
         {
             ModuleManager.PowerOff(this);
         } 
-
         void ITickable.Tick()
         {
             Stats.Tick(Time.deltaTime);

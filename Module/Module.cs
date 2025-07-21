@@ -17,7 +17,10 @@ namespace Modules
         }
         abstract public void TurnOn(Building building);
         abstract public void TurnOff(Building building);
-        abstract public void BlackOut(Building building);
+        virtual public void BlackOut(Building building)
+        {
+
+        }
         abstract public void SwitchState(Building building);
         public void StateChange(bool state)
         {
