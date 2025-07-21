@@ -8,7 +8,6 @@ namespace Base
         public event Action<StatModifier> OnDispose = delegate { };
         readonly CountdownTimer timer;
         public bool MarkedForRemoval;
-
         public StatModifier(StatType statType, IOperationalStrategy operation, float duration)
         {
             StatType = statType;
