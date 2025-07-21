@@ -9,7 +9,7 @@ namespace Modules
         StatModifier mod;
         [SerializeField] float Energy = 300;
         [SerializeField] float LifeTime = 300;
-        [SerializeField] public float LifeTimePercent { get; private set; } // charge left
+        [SerializeField] public float LifeTimePercent { get; private set; }
         [SerializeField] float InitialLifeTime = 300;
         public event Action OnChange;
         public override void Start()

@@ -32,14 +32,22 @@ public class Movement : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Vector3 actualdir = (dir.y * orientation.forward + dir.x * orientation.right).normalized;
-
-
-        rb.linearVelocity = new Vector3(actualdir.x, 0, actualdir.z).normalized  * MoveSpeed +new Vector3(0, rb.linearVelocity.y, 0);
-        if (rb.linearVelocity != Vector3.zero)
+        if (dir != Vector3.zero)
         {
-            soundTimer.Tick(Time.deltaTime);
+            Vector3 actualdir = (dir.y * orientation.forward + dir.x * orientation.right).normalized;
+
+            rb.linearVelocity = new Vector3(actualdir.x, 0, actualdir.z).normalized * MoveSpeed + new Vector3(0, rb.linearVelocity.y, 0);
+
+            if (rb.linearVelocity != Vector3.zero)
+            {
+                soundTimer.Tick(Time.deltaTime);
+            }
         }
+        else
+        {
+            rb.linearVelocity = Vector3.zero; 
+        }
+
     }
     void PlaySound()
     {

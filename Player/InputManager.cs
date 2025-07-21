@@ -6,20 +6,35 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(PlayerInput))]
 public class InputManager : MonoBehaviour
 {
+    InputSystem_Actions inputs;
     public event Action<Vector2> Move;
     public event Action<Vector2> Look;
     public event Action LeftMouse;
-    public void OnLook(InputValue ctx)
+    private void Awake()
     {
-        Vector2 dir = ctx.Get<Vector2>();
+        inputs = new();
+    }
+    void OnEnable()
+    {
+        inputs.Player.Attack.performed += OnAttack;
+        inputs.Player.Move.performed += OnMove;
+        inputs.Player.Look.performed += OnLook;
+        inputs.Player.Attack.Enable();
+        inputs.Player.Move.Enable();
+        inputs.Player.Look.Enable();
+    }
+    public void OnLook(InputAction.CallbackContext obj)
+    {
+        Vector2 dir = obj.ReadValue<Vector2>();
         Look?.Invoke(dir);
     }
-    public void OnMove(InputValue ctx)
+    public void OnMove(InputAction.CallbackContext obj)
     {
-        Vector2 dir = ctx.Get<Vector2>();
+        Vector2 dir = obj.ReadValue<Vector2>();
+        Debug.Log(dir);
         Move?.Invoke(dir);
     }
-    public void OnAttack()
+    public void OnAttack(InputAction.CallbackContext obj)
     {
         Debug.Log("OnAttack");
         LeftMouse?.Invoke();

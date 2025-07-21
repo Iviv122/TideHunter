@@ -22,7 +22,7 @@ namespace Base
         private void PowerOff()
         {
             ModuleManager.PowerOff(this);
-        } 
+        }
         void ITickable.Tick()
         {
             Stats.Tick(Time.deltaTime);

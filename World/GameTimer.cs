@@ -11,7 +11,7 @@ namespace World
         readonly public CountdownTimer timer;
         private bool started = false;
         int init = 300;
-        public GameTimer(Radar radar) // in seconds i guess
+        public GameTimer(Radar radar)
         {
             radar.OnStart += Start;
 

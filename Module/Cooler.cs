@@ -10,7 +10,6 @@ namespace Modules
         StatModifier mod1;
         [SerializeField] float Energy = -300;
         [SerializeField] float Heat = -30;
-
         public override void TurnOff(Building building)
         {
             if (mod != null)
