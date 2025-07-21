@@ -1,7 +1,7 @@
 # TideHunter radar maintaince game
 
 The game itself is pretty boring and uninteresitng but there are some things to say about code.
-
+In order to win you need to make this ‘radar’ work for 5 minutes. Internal battery can work for 20 seconds without power
 ## Dependecies
 - VContainer
 - Serialize Interfaces!
